@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.UpdateNoteActivity">
+    tools:context=".ui.AddNoteActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/nameCard"
@@ -60,30 +60,14 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
         android:src="@drawable/baseline_save_as_24"
         android:text="Save"
         android:textColor="@color/white"
         app:backgroundTint="#4CAF50"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ageCard"
-        app:tint="@color/white" />
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/baseline_delete_forever_24"
-        android:text="Delete"
-        android:textColor="@color/white"
-        app:backgroundTint="#E91E63"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSave"
         app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

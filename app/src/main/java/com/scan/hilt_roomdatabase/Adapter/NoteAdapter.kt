@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.scan.hilt_roomdatabase.DB.NoteModel
 import com.scan.hilt_roomdatabase.Uitls.Constants.BUNDLE_NOTE_ID
-import com.scan.hilt_roomdatabase.UpdateNoteActivity
+import com.scan.hilt_roomdatabase.View.UpdateNoteActivity
 import com.scan.hilt_roomdatabase.databinding.ItemNoteBinding
 import javax.inject.Inject
 
@@ -26,9 +26,7 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.NoteV
         return NoteViewHolder()
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = differ.currentList.size
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         holder.bind(differ.currentList[position])
@@ -65,4 +63,5 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.NoteV
     }
 
     val differ = AsyncListDiffer(this, differCallback)
+
 }
